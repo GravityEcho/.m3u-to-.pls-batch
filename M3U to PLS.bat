@@ -4,7 +4,7 @@ setlocal enableDelayedExpansion
 cd /d "%~dp0"
 
 set "i=0"
-@for /f %%a in ('findstr "http" playlist.m3u') do (   
+@for /f %%a in ('findstr /b "http" playlist.m3u') do (   
     set /a "i+=1"
     set "song[!i!]=%%a" 
 )   
