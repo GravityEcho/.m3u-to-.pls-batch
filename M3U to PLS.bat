@@ -14,7 +14,7 @@ set "total=!i!"
 >playlist.pls echo NumberOfEntries=!total! 
 >playlist.pls (
     for /l %%p in (1,1,!total!) do (
-        echo File%%p=!song[%%p]!
+        echo File%%p=!song[%%p]!&echo Title%%p=!song[%%p]!
     )
 )
 
